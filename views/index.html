@@ -6,5 +6,20 @@
 {% endblock %}
 
 {% block content %}
-<h1>Hello World!</h1>
+  <div class="container">
+    <!-- row containing a form that requests city and country -->
+    <div class="row">
+      <form id="queryLocForm" action="/" method="post">
+        <div id="queryLocDiv" class="form-group">
+          <!-- q={city name},{country code} -->
+          <input type="search" class="form-control" id="queryLocInput" name="query[location]" placeholder="e.g. San Francisco, US">
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    <div>
+  </div>
+
+
 {% endblock %}
