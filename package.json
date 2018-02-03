@@ -1,0 +1,36 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "description": "Application to display weather at your location.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielknguyen/weather-widget.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "jQuery",
+    "node.js",
+    "express.js"
+  ],
+  "author": "Daniel Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielknguyen/weather-widget/issues"
+  },
+  "homepage": "https://github.com/danielknguyen/weather-widget#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "nunjucks": "^3.0.1"
+  }
+}
