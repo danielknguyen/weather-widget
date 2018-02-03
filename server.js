@@ -8,7 +8,11 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     // templating engine to help display static web pages
     engines = require('consolidate'),
-    assert = require('assert')
+    assert = require('assert'),
+    // require openweather api module
+    weather = require('openweather-apis'),
+    // require config file for openweather api and pass in api module as an argument
+    openWeatherAppConfig = require('./config/openWeatherAppConfig.js')(weather);
 
 // set where the view templates are located
 // ___dirname allows full path to directory to views
@@ -23,8 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse data as a json object
 app.use(bodyParser.json());
 
-// require routes module, pass express webserver in as a paramter
-var routes = require('./public/scripts/routes.js')(app);
+// require routes module, pass express webserver and weather module in as a parameter
+var routes = require('./public/scripts/routes.js')(app, weather);
 
 // listen for client connections (local host port)
 // execute a callback function that logs the server is listening
