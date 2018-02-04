@@ -1,6 +1,8 @@
+body {
+  user-select: none;
+}
 #weather-widget-container {
   border: 1px solid black;
-  width: 30vw;
   padding: 10px;
 }
 #queryLocDiv {
@@ -8,11 +10,10 @@
   font-family: 'Oswald', sans-serif;
 }
 #queryLocInput {
-  width: 25vw;
   font-family: 'Oswald', sans-serif;
 }
 .weather-app-title {
-  margin: 25px;
+  margin-top: 25px;
   font-family: 'Archivo Black', sans-serif;
 }
 .three-day-forecast-day-of-the-week, .three-day-forecast-weather-icon, .three-day-forecast-temperature {
@@ -39,4 +40,10 @@
 }
 .weather-widget-icon {
   width: 75px;
+}
+.celsius {
+  display: none;
+}
+.deg {
+  cursor: pointer;
 }
