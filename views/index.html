@@ -6,19 +6,91 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-    <!-- row containing a form that requests city and country -->
-    <div class="row">
-      <form id="queryLocForm" action="/" method="post">
-        <div id="queryLocDiv" class="form-group">
-          <!-- q={city name},{country code} -->
-          <input type="search" class="form-control" id="queryLocInput" name="query[location]" placeholder="e.g. San Francisco, US">
-        </div>
-        <button type="submit" class="btn btn-primary">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
+  <!-- row containing a form that requests city and country -->
+  <div style="text-align: center">
+    <p class="weather-app-title">Weather Forecast</p>
+    <form id="queryLocForm" action="/" method="post">
+      <div id="queryLocDiv" class="form-group">
+        <!-- q={city name},{country code} -->
+        <input type="search" class="form-control" id="queryLocInput" name="query[location]" placeholder="e.g. San Francisco, US">
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+  <div id="weather-widget-container" class="container">
+    <!-- weather widget -->
+    <!-- api JSONobj: data=data -->
     <div>
+      <div class="weather-widget-div">
+        <!-- location -->
+        <div class="weather-widget-location">
+          <p>{{ data.city.name }}, {{ data.city.country }}</p>
+        </div>
+        <!-- temperature and icon -->
+        <div class="temp-and-icon">
+          <div class="weather-widget-temperature">
+            <p>{{ data.list[0].temp.day }}&deg; C</p>
+          </div>
+          <div>
+            <img class="weather-widget-icon" src="{{ data.list[0].weather[0].icon }}">
+            <p class="weather-widget-description" style="text-align: center">
+              {{ data.list[0].weather[0].main }}
+            </p>
+          </div>
+        </div>
+        <!-- day of the week -->
+        <div class="weather-widget-day-of-the-week" style="clear: both; text-align: center">
+          <p>{{ data.list[0].dt }}</p>
+        </div>
+        <!-- 3 day forecast -->
+        <!-- second day forecast -->
+        <div>
+          <div class="threeDayForecastDiv">
+            <div class="three-day-forecast-day-of-the-week">
+              <p>{{ data.list[1].dt }}</p>
+            </div>
+            <div class="three-day-forecast-weather-icon">
+              <img src="{{ data.list[1].weather[0].icon }}">
+            </div>
+            <div class="three-day-forecast-temperature">
+              <p>{{ data.list[1].temp.day }}&deg; C</p>
+            </div>
+          </div>
+        </div>
+        <!-- third day forecast -->
+        <div>
+          <div class="threeDayForecastDiv">
+            <div class="three-day-forecast-day-of-the-week">
+              <p>{{ data.list[2].dt }}</p>
+            </div>
+            <div class="three-day-forecast-weather-icon">
+              <!-- {{ data.weather.icon }} -->
+              <img src="{{ data.list[2].weather[0].icon }}">
+            </div>
+            <div class="three-day-forecast-temperature">
+              <p>{{ data.list[2].temp.day }}&deg; C</p>
+            </div>
+          </div>
+        </div>
+        <!-- fourth day forecast -->
+        <div>
+          <div class="threeDayForecastDiv">
+            <div class="three-day-forecast-day-of-the-week">
+              <p>{{ data.list[3].dt }}</p>
+            </div>
+            <div class="three-day-forecast-weather-icon">
+              <!-- {{ data.weather.icon }} -->
+              <img src="{{ data.list[3].weather[0].icon }}">
+            </div>
+            <div class="three-day-forecast-temperature">
+              <p>{{ data.list[3].temp.day }}&deg; C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
