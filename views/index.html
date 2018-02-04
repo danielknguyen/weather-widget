@@ -31,7 +31,8 @@
         <!-- temperature and icon -->
         <div class="temp-and-icon">
           <div class="weather-widget-temperature">
-            <p>{{ data.list[0].temp.day }}&deg; C</p>
+            <p class="celsius">{{ data.list[0].temp.day }}<span class="deg">&deg;</span> C</p>
+            <p class="fahrenheit">{{ data.list[0].temp.fahrenheit }}<span class="deg">&deg;</span> F</p>
           </div>
           <div>
             <img class="weather-widget-icon" src="{{ data.list[0].weather[0].icon }}">
@@ -55,7 +56,8 @@
               <img src="{{ data.list[1].weather[0].icon }}">
             </div>
             <div class="three-day-forecast-temperature">
-              <p>{{ data.list[1].temp.day }}&deg; C</p>
+              <p class="celsius">{{ data.list[1].temp.day }}<span class="deg">&deg;</span> C</p>
+              <p class="fahrenheit">{{ data.list[1].temp.fahrenheit }}<span class="deg">&deg;</span> F</p>
             </div>
           </div>
         </div>
@@ -70,7 +72,8 @@
               <img src="{{ data.list[2].weather[0].icon }}">
             </div>
             <div class="three-day-forecast-temperature">
-              <p>{{ data.list[2].temp.day }}&deg; C</p>
+              <p class="celsius">{{ data.list[2].temp.day }}<span class="deg">&deg;</span> C</p>
+              <p class="fahrenheit">{{ data.list[2].temp.fahrenheit }}<span class="deg">&deg;</span> F</p>
             </div>
           </div>
         </div>
@@ -85,7 +88,8 @@
               <img src="{{ data.list[3].weather[0].icon }}">
             </div>
             <div class="three-day-forecast-temperature">
-              <p>{{ data.list[3].temp.day }}&deg; C</p>
+              <p class="celsius">{{ data.list[3].temp.day }}<span class="deg">&deg;</span> C</p>
+              <p class="fahrenheit">{{ data.list[3].temp.fahrenheit }}<span class="deg">&deg;</span> F</p>
             </div>
           </div>
         </div>
