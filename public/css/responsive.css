@@ -1,0 +1,69 @@
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .weather-app-title {
+    font-size: 2em;
+  }
+  #queryLocInput {
+    width: 60vw;
+  }
+  #weather-widget-container {
+    width: 70vw;
+  }
+  .weather-widget-location {
+    font-size: 1.5em;
+  }
+  .weather-widget-temperature .fahrenheit, .weather-widget-temperature .celsius {
+    font-size: 3em;
+  }
+  .three-day-forecast-temperature {
+    font-size: 1.3em;
+  }
+  .weather-widget-day-of-the-week, .three-day-forecast-day-of-the-week {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .weather-app-title {
+    font-size: 2em;
+  }
+  #queryLocInput {
+    width: 40vw;
+  }
+  #weather-widget-container {
+    width: 50vw;
+  }
+  .weather-widget-location {
+    font-size: 1.5em;
+  }
+  .weather-widget-temperature .fahrenheit, .weather-widget-temperature .celsius {
+    font-size: 3em;
+  }
+  .three-day-forecast-temperature {
+    font-size: 1.3em;
+  }
+  .weather-widget-day-of-the-week, .three-day-forecast-day-of-the-week {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+  .weather-app-title {
+    font-size: 2em;
+  }
+  #queryLocInput {
+    width: 30vw;
+  }
+  #weather-widget-container {
+    width: 34vw;
+  }
+  .weather-widget-location {
+    font-size: 1.5em;
+  }
+  .weather-widget-temperature .fahrenheit, .weather-widget-temperature .celsius {
+    font-size: 3em;
+  }
+  .three-day-forecast-temperature {
+    font-size: 1.3em;
+  }
+  .weather-widget-day-of-the-week, .three-day-forecast-day-of-the-week {
+    font-size: 1.2em;
+  }
+}
