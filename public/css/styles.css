@@ -1,3 +1,42 @@
+#weather-widget-container {
+  border: 1px solid black;
+  width: 30vw;
+  padding: 10px;
+}
 #queryLocDiv {
   display: inline-block;
+  font-family: 'Oswald', sans-serif;
+}
+#queryLocInput {
+  width: 25vw;
+  font-family: 'Oswald', sans-serif;
+}
+.weather-app-title {
+  margin: 25px;
+  font-family: 'Archivo Black', sans-serif;
+}
+.three-day-forecast-day-of-the-week, .three-day-forecast-weather-icon, .three-day-forecast-temperature {
+  display: inline-block;
+}
+.threeDayForecastDiv {
+  border-top: 1px solid black;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.temp-and-icon {
+  display: flex;
+  justify-content: space-around;
+}
+.weather-widget-location {
+  font-family: 'Patua One', cursive;
+}
+.weather-widget-temperature, .three-day-forecast-temperature {
+  font-family: 'Merriweather', serif;
+}
+.weather-widget-day-of-the-week, .three-day-forecast-day-of-the-week {
+  font-family: 'PT Serif', serif;
+}
+.weather-widget-icon {
+  width: 75px;
 }
