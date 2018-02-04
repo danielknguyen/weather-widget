@@ -12,7 +12,9 @@ var express = require('express'),
     // require openweather api module
     weather = require('openweather-apis'),
     // require config file for openweather api and pass in api module as an argument
-    openWeatherAppConfig = require('./config/openWeatherAppConfig.js')(weather);
+    openWeatherAppConfig = require('./config/openWeatherAppConfig.js')(weather),
+    // require date mondule
+    date = require('date-and-time');
 
 // set where the view templates are located
 // ___dirname allows full path to directory to views
@@ -28,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // require routes module, pass express webserver and weather module in as a parameter
-var routes = require('./public/scripts/routes.js')(app, weather);
+var routes = require('./public/scripts/routes.js')(app, weather, date);
 
 // listen for client connections (local host port)
 // execute a callback function that logs the server is listening
