@@ -2,8 +2,10 @@ body {
   user-select: none;
 }
 #weather-widget-container {
-  border: 1px solid black;
-  padding: 10px;
+  color: #FFFFFF;
+}
+.weather-widget-sub-div {
+  padding: 5px 15px;
 }
 #queryLocDiv {
   display: inline-block;
@@ -13,15 +15,14 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 .weather-app-title {
-  margin-top: 25px;
+  margin-top: 5px;
   font-family: 'Archivo Black', sans-serif;
 }
 .three-day-forecast-day-of-the-week, .three-day-forecast-weather-icon, .three-day-forecast-temperature {
   display: inline-block;
 }
 .threeDayForecastDiv {
-  border-top: 1px solid black;
-  margin: 0;
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -41,9 +42,27 @@ body {
 .weather-widget-icon {
   width: 75px;
 }
+.wi-icon {
+  text-align: center;
+}
+.weather-widget-description {
+  font-family: 'Noto Serif', serif;
+}
 .celsius {
   display: none;
 }
 .deg {
   cursor: pointer;
+}
+.changeColorContainer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+.changeColor {
+  border-radius: 50%;
+}
+.changeColor:active {
+  text-decoration: none;
 }
