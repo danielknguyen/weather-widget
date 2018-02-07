@@ -35,8 +35,9 @@ var routes = require('./public/scripts/routes.js')(app, weather, date);
 // listen for client connections (local host port)
 // execute a callback function that logs the server is listening
 // to change ports $ mongod --port #
-var server = app.listen(process.env.PORT || 8000, function() {
+var port = process.env.PORT || 8000;
+var host = "0.0.0.0"
+var server = app.listen(port, host, function() {
   // save port number
-  var port = server.address().port;
   console.log('Express server is listening on %d in %s mode', this.address().port, app.settings.env);
 });
